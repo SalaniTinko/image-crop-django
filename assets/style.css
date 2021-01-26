@@ -1,0 +1,120 @@
+@media (max-width:768px){
+  #fix-mobile{
+    display: block !important;
+  }
+}
+
+html {
+  text-align: center;
+  font-size: 62.5%;
+}
+body {
+  background-color: grey;
+}
+/* Logo Size */
+.the_logo img {
+  width: auto;
+  height: auto;
+}
+.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 5rem;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.button::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.button:hover {
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: #ffffff;
+}
+.button-dark {
+  font-style: bolder;
+  font-size: 15px;
+  color: #000000;
+  background: #E17F00;
+}
+.secondary__heading {
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  text-align: center;
+}
+.button-blue {
+  margin-top: 2rem;
+  color: #fff;
+  background-color: #0d47a1;
+  padding: 1.2rem 5rem;
+}
+.button-blue::after {
+  background-color: #0d47a1;
+}
+
+
+.type-order {
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+}
+
+.order-price {
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+}
+
+.mb-3 {
+  font-size: 15px;
+}
+
+.rounded-lg {
+  border-radius: 1rem !important;
+}
+
+.text-small {
+  font-size: 0.9rem !important;
+}
+
+.custom-separator {
+  width: 5rem;
+  height: 6px;
+  border-radius: 1rem;
+}
+
+.text-uppercase {
+  letter-spacing: 0.2em;
+  }
+
+.btn{
+  background-color: #E17F00;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #3b3b3b;
+}
+
+.btn-primary, .btn-block, .p-2, .shadow, .rounded-pill {
+  background-color: #151515;
+}

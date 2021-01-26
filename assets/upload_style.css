@@ -1,0 +1,102 @@
+img {
+    max-width: 100%;
+  }
+
+
+#canvas {
+    height: 600px;
+    width: 600px;
+    background-color: #ffffff;
+    cursor: default;
+    border: 1px solid rgb(255, 255, 255);
+}
+.hidden {
+    display: none !important;
+}
+body {
+    background-color: grey;
+    text-align: center;
+}
+#fileInput {
+    background-color: black;
+}
+  /* This is to hide the file input button to enable us to style it */
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    position: relative;
+    background-color:black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid red;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.custom-file-upload:hover {
+    cursor: pointer;
+}
+
+
+
+#btnCrop {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid red;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#btnCrop:hover {
+    cursor: pointer;
+}
+
+.cv {
+    width: 30%;
+    margin: auto;
+}
+
+#result img{
+    width: 35%;
+}
+button.paybtn {
+    background: #242624;
+    color: aliceblue;
+    padding: 15px;
+    font-size: 19px;
+    border: 1px solid aliceblue;
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid red;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1% auto;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+}

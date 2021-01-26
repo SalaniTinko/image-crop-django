@@ -1,0 +1,72 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Prototype</title>
+    <link href="{% static 'upload_style.css' %}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.css" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+</head>
+<body>
+<br>
+<div class="container text-center">
+
+    <div class="hidden cv">
+        <canvas id="canvas">
+            Your browser does not support the HTML5 canvas element.
+        </canvas>
+        <input class="hidden" id="btnCrop" type="button" value="Crop"/>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-secondary text-center" id="message" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <label class="custom-file-upload">
+
+        <input accept="image/*" id="fileInput" type="file"/>
+        Upload file
+    </label>
+
+    </p>
+    <!-- Required jquery/cropper/index files -->
+    <form class="" method="post">
+        {% csrf_token %}
+        <div id="result"></div>
+    </form>
+
+    <button
+            class="paybtn"
+            data-amount="{{ total_amount }}"
+            data-callback-url="https://pay-api.spankchain.com/quickstart/callback"
+            data-currency="USD"
+            data-description="Test Invoice HTML"
+            data-on-payment="onSpankPayPayment"
+            data-spankpay-key="test_pk_sweet_soul_D6vAFA4f7xaWYuXCTThncs3kXTLg2afeuL9bPRi7P" style="display:none;">
+        Pay with SpankPay!
+    </button>
+</div>
+<script>
+function onSpankPayPayment(payment) {
+    console.log(`Payment ${payment.status}:`, payment)
+     console.log(`Payment ${payment.status}:`, payment)
+  if (payment.status == "succeeded") {
+  document.getElementById("submitBtn").click();
+  } else {
+    window.location.href = '/order-failed'
+  }
+}
+</script>
+
+<script src="https://pay.spankchain.com/spankpay.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.js"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

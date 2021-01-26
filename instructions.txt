@@ -1,0 +1,20 @@
+hey:)
+
+I upload images to wasabi through their official api "boto3".
+
+
+Go to app/views.py, at line 16:
+  The function named "upload" does all handling.
+  I've added comments to explain the flow.
+
+  Please don't remove any files or folders from this project, it might cause errors.
+
+
+Go to settings.py:
+  line 126, 127 defines your wasabi keys and bucket name,
+  WASABI_KEY_SECRET and WASABI_KEY and BUCKET_NAME
+
+  Incase you change any api key or bucket name, please update these variables.
+
+  Api keys are here https://console.wasabisys.com/#/access_keys
+  You can't see api secret on website coz it's only visible at time of creating api key.
